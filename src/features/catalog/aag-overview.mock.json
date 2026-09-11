@@ -1,0 +1,19 @@
+{
+  "productId": "aag",
+  "name": "Double Deflection Grille",
+  "articleNo": "AAG",
+  "description": "The Air Master AAG is an extruded aluminium double deflection grille with aero foil adjustable front and rear blades, set at 90° to each other so airflow direction can be adjusted independently in the horizontal and vertical planes. Performance is published at two blade settings — 0° (blades parallel to airflow, maximum throw) and 45° (blades angled, wider spread, shorter throw) — across five listed neck-size groups sharing a common free-area factor. A collar-mounted volume control damper is available as an accessory.",
+  "images": [
+    { "url": "/products/aag/product.webp", "alt": "Air Master AAG double deflection grille — product photo" }
+  ],
+  "facts": [
+    { "key": "product_type", "label": "Product Type", "value": "Double Deflection Adjustable Grille" },
+    { "key": "model", "label": "Model / Catalogue Ref.", "value": "AAG · Cat. No. AMI-01 · Page 1.9" },
+    { "key": "material", "label": "Material", "value": "Extruded Aluminium" },
+    { "key": "blade_profile", "label": "Blade Profile", "value": "Aerofoil, adjustable front & rear blades" },
+    { "key": "deflection", "label": "Deflection Angles", "value": "0° and 45°" },
+    { "key": "collar_damper", "label": "Accessories", "value": "Collar damper available" },
+    { "key": "application", "label": "Application", "value": "Supply / Return / Transfer air" }
+  ],
+  "specVariants": []
+}

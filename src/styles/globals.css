@@ -1,0 +1,391 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * ============================================================
+ *  COSMOS — "Industrial Precision" design system
+ *  Engineered for technical authority, reliability and the
+ *  industrial rigor of the HVAC sector. Flat, structured,
+ *  outline-driven. Inter typeface, 4px technical radius.
+ * ============================================================
+ */
+
+:root {
+  /* Technical radius — "machined edge" 4px base */
+  --radius: 0.25rem;
+
+  /* ---- Raw design palette (Industrial Precision) ---- */
+  --surface: #f9f9ff;
+  --surface-dim: #cfdaf2;
+  --surface-bright: #f9f9ff;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f0f3ff;
+  --surface-container: #e7eeff;
+  --surface-container-high: #dee8ff;
+  --surface-container-highest: #d8e3fb;
+  --on-surface: #111c2d;
+  --on-surface-variant: #44474e;
+  --inverse-surface: #263143;
+  --inverse-on-surface: #ecf1ff;
+  --outline: #74777e;
+  --outline-variant: #c4c6ce;
+  --surface-tint: #4b5f80;
+
+  --color-primary-navy: #000b1f;
+  --on-primary: #ffffff;
+  --primary-container: #0a2240;
+  --on-primary-container: #758aad;
+  --inverse-primary: #b2c7ee;
+
+  --corporate-blue: #325ea0;
+  --on-corporate-blue: #ffffff;
+  --corporate-blue-container: #8eb7ff;
+  --on-corporate-blue-container: #134687;
+
+  --tertiary: #170700;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #381a00;
+  --on-tertiary-container: #af7f59;
+
+  --error: #ba1a1a;
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+  --on-error-container: #93000a;
+
+  /* ---- Signature accents & industrial neutrals ---- */
+  --accent-gold: #e8b84b;
+  --surface-subtle: #edf2f8;
+  --status-available: #166534;
+  --status-conditional: #92400e;
+  --border-industrial: #bcbebe;
+
+  /* White page — separation comes from visible borders + tinted regions. */
+  --canvas: #ffffff;
+  /* Visible structural borders/dividers — ~3.2:1 on white (WCAG 1.4.11). */
+  --border-soft: #8d929c;
+  /* Form-control boundary — slightly stronger for field emphasis. */
+  --border-control: #6f747e;
+
+  /* ============================================================
+   *  Map shadcn / app semantic tokens onto the design palette
+   * ============================================================ */
+  /* White page; cards/fields defined by visible borders + tinted regions. */
+  --background: var(--canvas);
+  --foreground: var(--on-surface);
+
+  /* Cards share the white page but are outlined by visible borders. */
+  --card: var(--surface-container-lowest);
+  --card-foreground: var(--on-surface);
+  --popover: var(--surface-container-lowest);
+  --popover-foreground: var(--on-surface);
+
+  /* Corporate Blue is the functional workhorse for interactive elements. */
+  --primary: var(--corporate-blue);
+  --primary-foreground: var(--on-corporate-blue);
+
+  /* Tonal blue layer for secondary fills; Primary Navy text. */
+  --secondary: #dde5f4;
+  --secondary-foreground: var(--primary-container);
+
+  /* Section layering + hover tints, saturated enough to be visible. */
+  --muted: #dbe3f1;
+  --muted-foreground: var(--on-surface-variant);
+
+  --accent: #dde5f4;
+  --accent-foreground: var(--primary-container);
+
+  --destructive: var(--error);
+  --destructive-foreground: var(--on-error);
+
+  /* Two border tiers: soft for dividers/cards, control for form fields.
+     Kept light so the dense product UI reads calmly. */
+  --border: #e4e7ec;
+  --input: #d6dae1;
+  --ring: var(--corporate-blue);
+
+  /* COSMOS brand → Corporate Blue for consistency. */
+  --brand: var(--corporate-blue);
+  --brand-foreground: var(--on-corporate-blue);
+  --brand-muted: var(--on-surface-variant);
+}
+
+/*
+ * Dark surface mapping (inverse industrial). The design system is
+ * primarily a light, engineered theme; dark keeps the same accents.
+ */
+.dark {
+  --background: var(--inverse-surface);
+  --foreground: var(--inverse-on-surface);
+  --card: #1c2636;
+  --card-foreground: var(--inverse-on-surface);
+  --popover: #1c2636;
+  --popover-foreground: var(--inverse-on-surface);
+  --primary: #8eb7ff;
+  --primary-foreground: #134687;
+  --secondary: #2b3850;
+  --secondary-foreground: var(--inverse-on-surface);
+  --muted: #2b3850;
+  --muted-foreground: #c4c6ce;
+  --accent: #2b3850;
+  --accent-foreground: var(--inverse-on-surface);
+  --destructive: #ffb4ab;
+  --destructive-foreground: #690005;
+  --border: oklch(1 0 0 / 14%);
+  --input: oklch(1 0 0 / 18%);
+  --ring: #8eb7ff;
+  --brand: #8eb7ff;
+  --brand-foreground: #134687;
+  --brand-muted: #c4c6ce;
+}
+
+@theme inline {
+  /* Semantic colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-muted: var(--brand-muted);
+
+  /* Industrial Precision design tokens (utility-ready) */
+  --color-navy: var(--color-primary-navy);
+  --color-navy-container: var(--primary-container);
+  --color-corporate-blue: var(--corporate-blue);
+  --color-accent-gold: var(--accent-gold);
+  --color-surface: var(--surface);
+  --color-surface-subtle: var(--surface-subtle);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  --color-border-industrial: var(--border-industrial);
+  --color-border-soft: var(--border-soft);
+  --color-status-available: var(--status-available);
+  --color-status-conditional: var(--status-conditional);
+
+  /* Inter — the exclusive typeface */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+
+  /* Technical radius scale (per design tokens) */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+
+  /* Layout rhythm — 4px base unit */
+  --spacing-gutter: 16px;
+  --spacing-section: 48px;
+  --spacing-section-lg: 64px;
+  --container-max: 1280px;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Interactive affordances: pointer cursor on enabled controls + links. */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  a[href],
+  label[for],
+  summary {
+    cursor: pointer;
+  }
+}
+
+/*
+ * ============================================================
+ *  Typography utilities — Inter scale from the design system.
+ *  Declared as @utility so they work as classes
+ *  (<h1 className="text-headline-lg">) and via @apply.
+ * ============================================================
+ */
+@utility text-headline-lg {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+@utility text-headline-lg-mobile {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@utility text-headline-md {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+@utility text-headline-sm {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+@utility text-body-lg {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+@utility text-body-md {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@utility text-body-sm {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Uppercase data/category labels. */
+@utility text-label-bold {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Prominent performance values inside metric cards. */
+@utility text-metric-value {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+/*
+ * ============================================================
+ *  Component patterns — flat, outline-driven industrial UI.
+ * ============================================================
+ */
+@layer components {
+  /* Centered fixed-grid container (1280px on desktop). */
+  .container-cosmos {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+  @media (min-width: 768px) {
+    .container-cosmos {
+      padding-inline: 32px;
+    }
+  }
+
+  /* Metric card — white bg, 1px industrial border, soft 8px radius. */
+  .metric-card {
+    background-color: var(--surface-container-lowest);
+    border: 1px solid var(--border-soft);
+    border-radius: 0.5rem;
+    padding: 16px;
+  }
+  .metric-card .metric-card__label {
+    color: var(--on-surface-variant);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .metric-card .metric-card__value {
+    color: var(--primary-container);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+
+  /* Status badges — 10% tint fill + solid 1px colored border. */
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--radius);
+    border: 1px solid currentColor;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .status-badge--available {
+    color: var(--status-available);
+    background-color: color-mix(
+      in srgb,
+      var(--status-available) 10%,
+      transparent
+    );
+  }
+  .status-badge--conditional {
+    color: var(--status-conditional);
+    background-color: color-mix(
+      in srgb,
+      var(--status-conditional) 10%,
+      transparent
+    );
+  }
+}
+
+/* Hide scrollbars entirely (used for the horizontal tab strip). */
+@utility scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Slim, subtle scrollbar (used for the sidebar tree). */
+@utility scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: color-mix(
+      in oklab,
+      var(--muted-foreground) 35%,
+      transparent
+    );
+    border-radius: 9999px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}

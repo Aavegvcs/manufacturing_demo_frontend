@@ -1,0 +1,24 @@
+{
+  "tree": [
+    {
+      "id": "grilles",
+      "name": "Grilles",
+      "kind": "category",
+      "children": [
+        {
+          "id": "adjustable-grilles",
+          "name": "Adjustable Grilles",
+          "kind": "category",
+          "children": [
+            {
+              "id": "aag",
+              "name": "Double Deflection Grille",
+              "kind": "product",
+              "articleNo": "AAG"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "productId": "aag",
+  "groups": [
+    {
+      "id": "configuration",
+      "title": "Configuration",
+      "defaultOpen": true,
+      "parameters": [
+        {
+          "id": "deflection",
+          "label": "Blade Deflection",
+          "defaultValue": "0",
+          "options": [
+            { "value": "0", "label": "0° (Maximum Throw)" },
+            { "value": "45", "label": "45° (Wide Spread)" }
+          ]
+        }
+      ]
+    }
+  ]
+}

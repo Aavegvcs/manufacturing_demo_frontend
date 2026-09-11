@@ -1,0 +1,120 @@
+{
+  "productId": "aag",
+  "calculationConfig": {
+    "mountingOptions": [],
+    "terminalVelocityOptions": [],
+    "calculatorInputs": {
+      "widthMm": { "label": "Width (mm)", "unit": "mm" },
+      "collarAirflowCfm": { "label": "Collar airflow (CFM)", "unit": "CFM" },
+      "effectiveLengthMm": { "label": "Effective length (mm)", "unit": "mm" }
+    }
+  },
+  "datasets": [
+    {
+      "id": "aag-area-factors",
+      "label": "AAG Listed Sizes (in)",
+      "signature": { "type": "area_factors" },
+      "columns": [
+        { "key": "width", "label": "Width", "unit": "in" },
+        { "key": "length", "label": "Length", "unit": "in" },
+        { "key": "area_factor", "label": "Area Factor" }
+      ],
+      "rows": [
+        { "width": 9.84, "length": 7.87, "area_factor": 0.028 },
+        { "width": 13.78, "length": 5.91, "area_factor": 0.028 },
+        { "width": 15.75, "length": 4.92, "area_factor": 0.028 },
+        { "width": 19.69, "length": 3.94, "area_factor": 0.028 },
+
+        { "width": 9.84, "length": 9.84, "area_factor": 0.0324 },
+        { "width": 11.81, "length": 7.87, "area_factor": 0.0324 },
+        { "width": 15.75, "length": 5.91, "area_factor": 0.0324 },
+        { "width": 19.69, "length": 4.92, "area_factor": 0.0324 },
+        { "width": 25.59, "length": 3.94, "area_factor": 0.0324 },
+
+        { "width": 11.81, "length": 9.84, "area_factor": 0.039 },
+        { "width": 17.72, "length": 6.89, "area_factor": 0.039 },
+        { "width": 19.69, "length": 5.91, "area_factor": 0.039 },
+        { "width": 23.62, "length": 4.92, "area_factor": 0.039 },
+        { "width": 29.53, "length": 3.94, "area_factor": 0.039 },
+
+        { "width": 11.81, "length": 11.81, "area_factor": 0.0469 },
+        { "width": 13.78, "length": 9.84, "area_factor": 0.0469 },
+        { "width": 17.72, "length": 7.87, "area_factor": 0.0469 },
+        { "width": 23.62, "length": 5.91, "area_factor": 0.0469 },
+
+        { "width": 13.78, "length": 11.81, "area_factor": 0.0528 },
+        { "width": 15.75, "length": 9.84, "area_factor": 0.0528 },
+        { "width": 19.69, "length": 7.87, "area_factor": 0.0528 },
+        { "width": 29.53, "length": 5.91, "area_factor": 0.0528 }
+      ]
+    },
+    {
+      "id": "aag-performance",
+      "label": "AAG Air Flow Data — Table 1.3",
+      "signature": { "type": "performance_data" },
+      "columns": [
+        { "key": "area_factor", "label": "Area Factor" },
+        { "key": "cfm", "label": "Airflow", "unit": "CFM" },
+        { "key": "spread_angle", "label": "Blade Deflection", "type": "text" },
+        { "key": "throw_min", "label": "Throw (Min)", "unit": "m" },
+        { "key": "throw_max", "label": "Throw (Max)", "unit": "m" },
+        { "key": "static_pressure", "label": "Static Pressure", "unit": "mmH2O" },
+        { "key": "nc", "label": "NC", "type": "text" }
+      ],
+      "rows": [
+        { "area_factor": 0.028, "cfm": 200, "spread_angle": "0", "throw_min": 4.5, "throw_max": 6.7, "static_pressure": 0.64, "nc": "<15" },
+        { "area_factor": 0.028, "cfm": 250, "spread_angle": "0", "throw_min": 5.2, "throw_max": 7.6, "static_pressure": 0.99, "nc": 15 },
+        { "area_factor": 0.028, "cfm": 300, "spread_angle": "0", "throw_min": 5.8, "throw_max": 8.2, "static_pressure": 1.42, "nc": 20 },
+        { "area_factor": 0.028, "cfm": 400, "spread_angle": "0", "throw_min": 6.7, "throw_max": 9.8, "static_pressure": 2.51, "nc": 29 },
+        { "area_factor": 0.028, "cfm": 500, "spread_angle": "0", "throw_min": 7.3, "throw_max": 10.9, "static_pressure": 3.91, "nc": 35 },
+        { "area_factor": 0.028, "cfm": 200, "spread_angle": "45", "throw_min": 3.7, "throw_max": 5.8, "static_pressure": 1.7, "nc": "<15" },
+        { "area_factor": 0.028, "cfm": 250, "spread_angle": "45", "throw_min": 4.6, "throw_max": 6.7, "static_pressure": 2.64, "nc": 21 },
+        { "area_factor": 0.028, "cfm": 300, "spread_angle": "45", "throw_min": 5.2, "throw_max": 7.3, "static_pressure": 3.81, "nc": 27 },
+        { "area_factor": 0.028, "cfm": 400, "spread_angle": "45", "throw_min": 6.4, "throw_max": 8.8, "static_pressure": 6.73, "nc": 36 },
+        { "area_factor": 0.028, "cfm": 500, "spread_angle": "45", "throw_min": 6.7, "throw_max": 9.2, "static_pressure": 10.54, "nc": 42 },
+
+        { "area_factor": 0.0324, "cfm": 200, "spread_angle": "0", "throw_min": 4.5, "throw_max": 6.7, "static_pressure": 0.36, "nc": "<15" },
+        { "area_factor": 0.0324, "cfm": 250, "spread_angle": "0", "throw_min": 5.2, "throw_max": 7.6, "static_pressure": 0.58, "nc": "<15" },
+        { "area_factor": 0.0324, "cfm": 300, "spread_angle": "0", "throw_min": 5.8, "throw_max": 8.2, "static_pressure": 0.84, "nc": 17 },
+        { "area_factor": 0.0324, "cfm": 400, "spread_angle": "0", "throw_min": 6.7, "throw_max": 9.8, "static_pressure": 1.47, "nc": 24 },
+        { "area_factor": 0.0324, "cfm": 500, "spread_angle": "0", "throw_min": 7.3, "throw_max": 10.9, "static_pressure": 2.28, "nc": 30 },
+        { "area_factor": 0.0324, "cfm": 200, "spread_angle": "45", "throw_min": 3.7, "throw_max": 5.5, "static_pressure": 1.17, "nc": "<15" },
+        { "area_factor": 0.0324, "cfm": 250, "spread_angle": "45", "throw_min": 4.3, "throw_max": 6.4, "static_pressure": 1.83, "nc": 18 },
+        { "area_factor": 0.0324, "cfm": 300, "spread_angle": "45", "throw_min": 5.2, "throw_max": 7.3, "static_pressure": 2.62, "nc": 22 },
+        { "area_factor": 0.0324, "cfm": 400, "spread_angle": "45", "throw_min": 6.1, "throw_max": 8.5, "static_pressure": 4.67, "nc": 27 },
+        { "area_factor": 0.0324, "cfm": 500, "spread_angle": "45", "throw_min": 6.7, "throw_max": 9.1, "static_pressure": 7.24, "nc": 32 },
+
+        { "area_factor": 0.039, "cfm": 200, "spread_angle": "0", "throw_min": 4.6, "throw_max": 6.7, "static_pressure": 0.23, "nc": "<15" },
+        { "area_factor": 0.039, "cfm": 250, "spread_angle": "0", "throw_min": 5.2, "throw_max": 7.6, "static_pressure": 0.36, "nc": "<15" },
+        { "area_factor": 0.039, "cfm": 300, "spread_angle": "0", "throw_min": 5.8, "throw_max": 8.2, "static_pressure": 0.51, "nc": "<15" },
+        { "area_factor": 0.039, "cfm": 400, "spread_angle": "0", "throw_min": 6.7, "throw_max": 9.8, "static_pressure": 0.91, "nc": 19 },
+        { "area_factor": 0.039, "cfm": 500, "spread_angle": "0", "throw_min": 7.6, "throw_max": 11.0, "static_pressure": 1.45, "nc": 26 },
+        { "area_factor": 0.039, "cfm": 200, "spread_angle": "45", "throw_min": 3.4, "throw_max": 5.5, "static_pressure": 0.71, "nc": "<15" },
+        { "area_factor": 0.039, "cfm": 250, "spread_angle": "45", "throw_min": 4.3, "throw_max": 6.4, "static_pressure": 1.12, "nc": "<15" },
+        { "area_factor": 0.039, "cfm": 300, "spread_angle": "45", "throw_min": 4.8, "throw_max": 7.3, "static_pressure": 1.6, "nc": 19 },
+        { "area_factor": 0.039, "cfm": 400, "spread_angle": "45", "throw_min": 5.8, "throw_max": 8.5, "static_pressure": 2.87, "nc": 21 },
+        { "area_factor": 0.039, "cfm": 500, "spread_angle": "45", "throw_min": 6.4, "throw_max": 9.1, "static_pressure": 4.47, "nc": 28 },
+
+        { "area_factor": 0.0469, "cfm": 200, "spread_angle": "0", "throw_min": 4.6, "throw_max": 6.7, "static_pressure": 0.15, "nc": "<15" },
+        { "area_factor": 0.0469, "cfm": 250, "spread_angle": "0", "throw_min": 5.2, "throw_max": 7.6, "static_pressure": 0.23, "nc": "<15" },
+        { "area_factor": 0.0469, "cfm": 300, "spread_angle": "0", "throw_min": 5.8, "throw_max": 8.2, "static_pressure": 0.33, "nc": "<15" },
+        { "area_factor": 0.0469, "cfm": 400, "spread_angle": "0", "throw_min": 6.7, "throw_max": 9.5, "static_pressure": 0.61, "nc": "<15" },
+        { "area_factor": 0.0469, "cfm": 500, "spread_angle": "0", "throw_min": 7.9, "throw_max": 11.3, "static_pressure": 0.94, "nc": 18 },
+        { "area_factor": 0.0469, "cfm": 200, "spread_angle": "45", "throw_min": 3.1, "throw_max": 5.5, "static_pressure": 0.41, "nc": "<15" },
+        { "area_factor": 0.0469, "cfm": 250, "spread_angle": "45", "throw_min": 3.9, "throw_max": 6.4, "static_pressure": 0.61, "nc": "<15" },
+        { "area_factor": 0.0469, "cfm": 300, "spread_angle": "45", "throw_min": 4.8, "throw_max": 7.3, "static_pressure": 0.89, "nc": "<15" },
+        { "area_factor": 0.0469, "cfm": 400, "spread_angle": "45", "throw_min": 5.8, "throw_max": 8.2, "static_pressure": 1.6, "nc": 17 },
+        { "area_factor": 0.0469, "cfm": 500, "spread_angle": "45", "throw_min": 6.4, "throw_max": 9.1, "static_pressure": 2.46, "nc": 24 },
+
+        { "area_factor": 0.0528, "cfm": 250, "spread_angle": "0", "throw_min": 5.2, "throw_max": 7.3, "static_pressure": 0.18, "nc": "<15" },
+        { "area_factor": 0.0528, "cfm": 300, "spread_angle": "0", "throw_min": 5.5, "throw_max": 7.9, "static_pressure": 0.25, "nc": "<15" },
+        { "area_factor": 0.0528, "cfm": 400, "spread_angle": "0", "throw_min": 6.7, "throw_max": 9.5, "static_pressure": 0.46, "nc": "<15" },
+        { "area_factor": 0.0528, "cfm": 500, "spread_angle": "0", "throw_min": 7.6, "throw_max": 11.3, "static_pressure": 0.71, "nc": 15 },
+        { "area_factor": 0.0528, "cfm": 250, "spread_angle": "45", "throw_min": 3.6, "throw_max": 6.0, "static_pressure": 0.41, "nc": "<15" },
+        { "area_factor": 0.0528, "cfm": 300, "spread_angle": "45", "throw_min": 4.9, "throw_max": 7.0, "static_pressure": 0.58, "nc": "<15" },
+        { "area_factor": 0.0528, "cfm": 400, "spread_angle": "45", "throw_min": 5.5, "throw_max": 8.2, "static_pressure": 1.07, "nc": "<15" },
+        { "area_factor": 0.0528, "cfm": 500, "spread_angle": "45", "throw_min": 8.2, "throw_max": 9.1, "static_pressure": 1.65, "nc": 19 }
+      ]
+    }
+  ]
+}

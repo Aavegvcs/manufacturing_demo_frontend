@@ -1,0 +1,55 @@
+# Dependencies
+node_modules
+npm-debug.log
+pnpm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Next.js
+.next
+out
+dist
+
+# Build artifacts
+*.tsbuildinfo
+next-env.d.ts
+
+# Testing
+coverage
+.nyc_output
+
+# Environment files
+.env*.local
+.env.production
+
+# Git
+.git
+.gitignore
+.github
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation
+README.md
+*.md
+
+# CI/CD
+.gitlab-ci.yml
+.travis.yml
+.circleci
+
+# Misc
+.editorconfig
+.prettierrc
+.prettierignore
+.eslintrc.json
+biome.json

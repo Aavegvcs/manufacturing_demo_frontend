@@ -1,0 +1,23 @@
+{
+  "catalog": {
+    "title": "Adjustable Grilles — AAG Double Deflection Grille",
+    "series": "Table 1.3",
+    "catalog_code": "AMI-01"
+  },
+  "files": [
+    {
+      "url": "/products/aag/dimension.webp",
+      "type": "image",
+      "label": "Frame & Blade Profile Drawing (AAG-DH / AAG-DV)",
+      "size_label": "WEBP"
+    }
+  ],
+  "manufacturer": {
+    "name": "Air Master Fire Safety Equipments",
+    "address": "Shed-B, #2, K Narayanapura Main Road, Thanisandra, Bangalore-560077",
+    "tel": ["+91 9900179403", "+91 9900179404"],
+    "email": ["sales.blr@airmaster.co.in"],
+    "website": "https://airmaster.co.in"
+  },
+  "disclaimer": "Specifications, dimensions and performance data are subject to change without notice. Contact Air Master for certified dimensional drawings and current catalogue data."
+}

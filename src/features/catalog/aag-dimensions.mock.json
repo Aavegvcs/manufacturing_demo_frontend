@@ -1,0 +1,19 @@
+{
+  "size_range": {
+    "width_min_mm": 100,
+    "width_max_mm": 300,
+    "length_min_mm": 250,
+    "length_max_mm": 750
+  },
+  "drawings": [
+    {
+      "url": "/products/aag/dimension.webp",
+      "alt": "AAG frame and blade profile — Front Horizontal Blades (AAG-DH) and Front Vertical Blades (AAG-DV)"
+    }
+  ],
+  "notes": [
+    "L = Listed size = duct size. N = Neck size = L − 5 mm.",
+    "Front blades run horizontal (AAG-DH) or vertical (AAG-DV); enter Width, Height and Blade Deflection in the Parameters panel to look up this size's area factor and performance.",
+    "Listed sizes and area factors are grouped by common free-area factor (Table 1.3); exact frame and flange dimensions are available on request from Air Master."
+  ]
+}
