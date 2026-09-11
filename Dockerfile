@@ -32,7 +32,9 @@ COPY . .
 # Note: NEXT_PUBLIC_* vars must be available at build time
 ARG NEXT_PUBLIC_API_BASE_URL=/api
 ARG NEXT_PUBLIC_API_TIMEOUT=30000
-ARG NEXT_PUBLIC_USE_MOCK_CATALOG=false
+# This fork is a standalone Air Master AAG demo with no backend — it runs
+# entirely on the hardcoded mock data in src/features/catalog/*.mock.json.
+ARG NEXT_PUBLIC_USE_MOCK_CATALOG=true
 
 ENV NEXT_PUBLIC_API_BASE_URL=$NEXT_PUBLIC_API_BASE_URL
 ENV NEXT_PUBLIC_API_TIMEOUT=$NEXT_PUBLIC_API_TIMEOUT
