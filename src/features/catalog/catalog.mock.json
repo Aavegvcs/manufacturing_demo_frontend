@@ -14,7 +14,8 @@
               "id": "aag",
               "name": "Double Deflection Grille",
               "kind": "product",
-              "articleNo": "AAG"
+              "articleNo": "AAG",
+              "thumbnail": "/products/aag/product.webp"
             }
           ]
         }
